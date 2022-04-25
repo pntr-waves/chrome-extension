@@ -1,0 +1,64 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-size: 25px;
+    font-family: Raleway, 'Courier New', Courier, monospace;
+    box-sizing: border-box;
+    cursor: auto;
+    --backgroundColor: linear-gradient(27deg, rgba(255,255,255,0.7206232834930848) 0%, rgba(245,243,244,0.6) 51%);
+    --sliderBackgroundColor: linear-gradient(27deg, rgba(255,255,255,0.7206232834930848) 0%, rgba(245,243,244,1) 51%);
+    --leftShadow: #ced4da;
+    --rightShadow: #adb5bd;
+    --fontColor: #b6ccfe;
+    --highlightFontColor: #6a95f8;
+}
+
+.Main {
+    height: 100vh;
+    background: var(--backgroundColor);
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+}
+
+.Clock {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Slider {
+    background: var(--sliderBackgroundColor);
+    border-radius: 0.3rem;
+    box-shadow: -4px -4px 13px -2px var(--leftShadow), 6px 10px 13px -2px var(--rightShadow);
+    margin-right: 30px;
+    height: fit-content;
+    transition: transform ease-in-out 0.5s;
+
+}
+
+.Item {
+    height: 2rem;
+    width: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--fontColor);
+    transition: transform ease-in-out 0.5s;
+    font-weight: bold;
+}
+
+.Zoom {
+    border-radius: 50%;
+    box-shadow: -1px -1px 13px -2px var(--leftShadow), 5px 5px 13px -2px var(--rightShadow);
+    transform: scale(1.4);
+    margin: 20px 0;
+    background: var(--sliderBackgroundColor);
+    color: var(--highlightFontColor);
+}
+
+.Unit {
+    display: flex;
+    margin-right: 80px;
+}
